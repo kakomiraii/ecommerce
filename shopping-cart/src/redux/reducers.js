@@ -5,7 +5,7 @@ import {
   FETCH_PRODUCT_DETAILS,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  UPDATE_QUANTITY,
+  UPDATE_CART_ITEM_QUANTITY,
 } from "./actions";
 
 const productsReducer = (state = [], action) => {
@@ -39,7 +39,7 @@ const cartReducer = (state = [], action) => {
       return [...state, action.payload];
     case REMOVE_FROM_CART:
       return state.filter((item) => item.product.id !== action.payload);
-    case UPDATE_QUANTITY:
+    case UPDATE_CART_ITEM_QUANTITY:
       return state.map((item) =>
         item.product.id === action.payload.productId
           ? { ...item, quantity: parseInt(action.payload.quantity) }

@@ -26,24 +26,30 @@ const ProductDetails = () => {
   if (!product) return <div>Loading...</div>;
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="max-w-md border p-8">
-        <img src={product.image} alt={product.title} className="mb-4" />
-        <p className="font-semibold">{product.title}</p>
-        <p className="text-gray-600">${product.price}</p>
-        <input
-          type="number"
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-          min="1"
-          className="border p-2 mt-2"
+    <div className="flex justify-left items-center h-screen">
+      <div className="max-w-md p-10 flex">
+        <img
+          className="max-h-[500px] mr-20"
+          src={product.image}
+          alt={product.title}
         />
-        <button
-          onClick={handleAddToCart}
-          className="bg-blue-500 text-white px-4 py-2 mt-4"
-        >
-          Add to Cart
-        </button>
+        <div className="bg-yellow-200 p-4 rounded-lg">
+          <p className="font-semibold">{product.title}</p>
+          <p className="text-gray-600">${product.price}</p>
+          <input
+            type="number"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+            min="1"
+            className="border p-2 mt-2"
+          />
+          <button
+            onClick={handleAddToCart}
+            className="bg-blue-800 text-white px-4 py-2 mt-4 rounded-lg"
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );

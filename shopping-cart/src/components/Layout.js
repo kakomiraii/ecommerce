@@ -1,7 +1,8 @@
 // src/components/Layout.js
 import React from "react";
 import { Link } from "react-router-dom";
-import CartIcon from "./CartIcon"; // Import CartIcon component
+import CartIcon from "./CartIcon";
+import { IoHome } from "react-icons/io5";
 
 const Layout = ({ children }) => {
   return (
@@ -10,11 +11,16 @@ const Layout = ({ children }) => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="fixed top-4 left-4 flex items-center">
+                <IoHome 
+                  className="text-gray-700 pr-2"
+                  style={{ fontSize: "2.5rem" }}
+                />
+              </Link>
             </li>
           </ul>
         </nav>
-        <CartIcon /> {/* Render CartIcon component */}
+        <CartIcon />
       </header>
       <main>{children}</main>
     </div>
