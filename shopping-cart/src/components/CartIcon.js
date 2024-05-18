@@ -9,13 +9,13 @@ const CartIcon = () => {
   );
 
   return (
-    <Link to="/cart" className="fixed top-4 right-4 flex items-center">
-      <FaShoppingBag
-        className="text-gray-700 pr-2"
-        style={{ fontSize: "2.0rem" }}
-      />
-      <span className="cart-item-count text-blue-700">{cartItemCount}</span>
-    </Link>
+      <Link to="/cart" className="fixed top-4 right-4 flex items-center">
+        <FaShoppingBag
+          className="text-gray-700 pr-2"
+          style={{ fontSize: "2.0rem" }}
+        />
+        <span className="cart-item-count text-blue-700">{cartItemCount}</span>
+      </Link>
   );
 };
 

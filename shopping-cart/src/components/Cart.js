@@ -25,7 +25,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col h-screen justify-between bg-slate-500 rounded-md">
       <header className="flex justify-between items-center bg-yellow-200 p-4 mb-4 rounded-lg">
         <h1 className="text-2xl font-semibold">Your Cart</h1>
         <Link
