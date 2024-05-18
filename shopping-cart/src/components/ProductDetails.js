@@ -18,7 +18,7 @@ const ProductDetails = () => {
     dispatch(addToCart(product, quantity));
   };
 
-  if (!product) return <div>Product not found</div>;
+  if (!product) return <div></div>;
 
   return (
     <div className="flex justify-left items-center h-screen">
