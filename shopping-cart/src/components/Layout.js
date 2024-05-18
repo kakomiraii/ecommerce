@@ -1,4 +1,3 @@
-// src/components/Layout.js
 import React from "react";
 import { Link } from "react-router-dom";
 import CartIcon from "./CartIcon";
@@ -12,7 +11,7 @@ const Layout = ({ children }) => {
           <ul>
             <li>
               <Link to="/" className="fixed top-4 left-4 flex items-center">
-                <IoHome 
+                <IoHome
                   className="text-gray-700 pr-2"
                   style={{ fontSize: "2.5rem" }}
                 />

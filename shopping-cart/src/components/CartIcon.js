@@ -1,12 +1,12 @@
-// src/components/CartIcon.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaShoppingBag } from "react-icons/fa";
-import { selectCartItemCount } from "../redux/selectors";
 
 const CartIcon = () => {
-  const cartItemCount = useSelector(selectCartItemCount);
+  const cartItemCount = useSelector((state) =>
+    state.cart.reduce((acc, item) => acc + item.quantity, 0)
+  );
 
   return (
     <Link to="/cart" className="fixed top-4 right-4 flex items-center">

@@ -1,5 +1,3 @@
-// src/redux/reducers.js
-import { combineReducers } from "redux";
 import {
   FETCH_PRODUCTS,
   FETCH_PRODUCT_DETAILS,
@@ -8,7 +6,7 @@ import {
   UPDATE_CART_ITEM_QUANTITY,
 } from "./actions";
 
-const productsReducer = (state = [], action) => {
+export const productsReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
       return action.payload;
@@ -23,7 +21,7 @@ const productsReducer = (state = [], action) => {
   }
 };
 
-const cartReducer = (state = [], action) => {
+export const cartReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_CART:
       const existingItem = state.find(
@@ -49,10 +47,3 @@ const cartReducer = (state = [], action) => {
       return state;
   }
 };
-
-const rootReducer = combineReducers({
-  products: productsReducer,
-  cart: cartReducer,
-});
-
-export default rootReducer;

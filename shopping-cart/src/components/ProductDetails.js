@@ -1,29 +1,24 @@
-// src/components/ProductDetails.js
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductDetails, addToCart } from "../redux/actions";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/actions";
+import { useGetProductByIdQuery } from "../features/ProductsApi";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = useSelector((state) =>
-    state.products.find((product) => product.id === parseInt(id))
-  );
 
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {
-    if (!product) {
-      dispatch(fetchProductDetails(id));
-    }
-  }, [dispatch, product, id]);
+  const {
+    data: product,
+  } = useGetProductByIdQuery(id)
 
   const handleAddToCart = () => {
     dispatch(addToCart(product, quantity));
   };
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div>Product not found</div>;
 
   return (
     <div className="flex justify-left items-center h-screen">
