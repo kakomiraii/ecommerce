@@ -32,3 +32,8 @@ tailwindcss was very eyeopening. Tailwindcss is definitely
 far speedier in development and there is no need to upkeep
 a huge css file as well so I will be experimenting more of it 
 in my future builds. :) 
+
+Additional thoughts:
+
+I had wanted to implement a login page using MongoDB but 
+was not able to do so yet before the deadline.
