@@ -1,11 +1,17 @@
 This is my shopping cart assignment.
 
 To run this project:
+
 -Open up terminal
+
 -git clone 'repository'
+
 -cd ecommerce
+
 -cd shopping-cart
+
 -npm start 
+
 
 Considerations:
 
