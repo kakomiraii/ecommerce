@@ -15,7 +15,7 @@ To run this project:
 
 Considerations:
 
-#1 Initially, I used React context and hooks to state manage '
+#1 Initially, I used React context and hooks to state manage
 as this project has fewer states and components however,
 I switched to using Redux as Redux works well with complex
 state changes and can prevent bugs and inconsistent states 
