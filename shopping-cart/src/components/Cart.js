@@ -42,7 +42,7 @@ const Cart = () => {
             key={item.product.id}
             className="flex items-center justify-between border-b border-gray-200 py-4"
           >
-            <div className="flex items-center">
+            <div className="flex items-center p-3">
               <img
                 src={item.product.image}
                 alt={item.product.title}
@@ -83,7 +83,7 @@ const Cart = () => {
             </div>
             <div>
               <button
-                className="text-red-500 hover:text-red-600"
+                className="text-red-400 hover:text-red-600 p-4"
                 onClick={() => handleRemoveFromCart(item)}
               >
                 Remove
