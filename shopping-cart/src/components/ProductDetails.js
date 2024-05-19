@@ -10,9 +10,7 @@ const ProductDetails = () => {
 
   const [quantity, setQuantity] = useState(1);
 
-  const {
-    data: product,
-  } = useGetProductByIdQuery(id)
+  const { data: product } = useGetProductByIdQuery(id);
 
   const handleAddToCart = () => {
     dispatch(addToCart(product, quantity));

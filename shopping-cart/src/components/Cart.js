@@ -13,7 +13,7 @@ const Cart = () => {
       0
     )
   );
-  
+
   const formattedTotalAmount = totalAmount.toFixed(2);
 
   const handleRemoveFromCart = (item) => {
